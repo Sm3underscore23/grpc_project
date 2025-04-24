@@ -13,3 +13,4 @@ func (s *serv) Update(ctx context.Context, id int64, info *model.UpdateUserInfo)
 
 	return nil
 }
+
