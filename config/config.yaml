@@ -1,0 +1,10 @@
+host: localhost
+port: 8080
+
+db:
+  db_host: localhost
+  db_port: 8081
+  db_name: user_db
+  db_user: admin
+  db_password: 1234
+  db_sslmode: disable

@@ -1,0 +1,76 @@
+syntax = "proto3";
+
+package user_v1;
+
+import "google/protobuf/empty.proto";
+import "google/protobuf/timestamp.proto";
+
+option go_package = "project/pkg/user_v1;user_v1";
+
+service UserV1 {
+  rpc Create(CreateRequest) returns (CreateResponse);
+  rpc Get(GetRequest) returns (GetResponse);
+  rpc Update(UpdateRequest) returns (google.protobuf.Empty);
+  rpc Delete(DeleteRequest) returns (google.protobuf.Empty);
+}
+
+enum Role {
+  ROLE_UNSPECIFIED = 0;
+  ROLE_ADMIN = 1;
+  ROLE_USER = 2;
+}
+
+message UserInfoPublic {
+  int64 id = 1;
+  string name = 2;
+  string email = 3;
+  Role enum = 4;
+  google.protobuf.Timestamp created_at = 5;
+  google.protobuf.Timestamp updated_at = 6;
+}
+
+message UserInfoPrivate {
+  string name = 1;
+  string email = 2;
+  string password = 3;
+  Role enum = 4;
+}
+
+message UpdateUserInfo {
+  optional string name = 1;
+  optional string email = 2;
+}
+
+message User {
+  int64 id = 1;
+  UserInfoPrivate info = 2;
+  google.protobuf.Timestamp created_at = 3;
+  google.protobuf.Timestamp updated_at = 4;
+}
+  
+message CreateRequest {
+  UserInfoPrivate info = 1;
+}
+
+message CreateResponse {
+  int64 id = 1;
+}
+
+message GetRequest {
+  int64 id = 1;
+}
+
+message GetResponse {
+  UserInfoPublic info_public = 1;
+}
+
+message UpdateRequest {
+  int64 id = 1;
+  UpdateUserInfo info = 2;
+}
+
+message DeleteRequest {
+  int64 id = 1;
+}
+
+
