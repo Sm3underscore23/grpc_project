@@ -1,8 +1,8 @@
 package converter
 
 import (
-	"project/iternal/model"
-	repoModel "project/iternal/repository/user/model"
+	"project/internal/model"
+	repoModel "project/internal/repository/user/model"
 )
 
 func ToServiceFromRepoUIPb(user *repoModel.UserInfoPublic) *model.UserInfoPublic {

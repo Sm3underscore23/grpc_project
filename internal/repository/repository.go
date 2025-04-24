@@ -1,11 +1,11 @@
-package service
+package repository
 
 import (
 	"context"
-	"project/iternal/model"
+	"project/internal/model"
 )
 
-type UserService interface {
+type UserRepository interface {
 	Create(ctx context.Context, info *model.UserInfoPrivate) (int64, error)
 	Get(ctx context.Context, id int64) (*model.UserInfoPublic, error)
 	Update(ctx context.Context, id int64, info *model.UpdateUserInfo) error

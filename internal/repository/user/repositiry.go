@@ -2,10 +2,10 @@ package user
 
 import (
 	"context"
-	"project/iternal/model"
-	"project/iternal/repository"
-	"project/iternal/repository/user/converter"
-	repoModel "project/iternal/repository/user/model"
+	"project/internal/model"
+	"project/internal/repository"
+	"project/internal/repository/user/converter"
+	repoModel "project/internal/repository/user/model"
 
 	sq "github.com/Masterminds/squirrel"
 	"github.com/jackc/pgx/v5/pgxpool"

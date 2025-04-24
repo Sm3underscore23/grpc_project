@@ -2,7 +2,7 @@ package user
 
 import (
 	"context"
-	"project/iternal/converter"
+	"project/internal/converter"
 
 	desc "project/pkg/user_v1"
 

@@ -1,7 +1,7 @@
 package converter
 
 import (
-	"project/iternal/model"
+	"project/internal/model"
 	desc "project/pkg/user_v1"
 
 	"google.golang.org/protobuf/types/known/timestamppb"

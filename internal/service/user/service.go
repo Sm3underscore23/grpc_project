@@ -1,8 +1,8 @@
 package user
 
 import (
-	"project/iternal/repository"
-	"project/iternal/service"
+	"project/internal/repository"
+	"project/internal/service"
 )
 
 type serv struct{

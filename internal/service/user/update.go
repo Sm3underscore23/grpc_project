@@ -2,7 +2,7 @@ package user
 
 import (
 	"context"
-	"project/iternal/model"
+	"project/internal/model"
 )
 
 func (s *serv) Update(ctx context.Context, id int64, info *model.UpdateUserInfo) error {
@@ -13,4 +13,3 @@ func (s *serv) Update(ctx context.Context, id int64, info *model.UpdateUserInfo)
 
 	return nil
 }
-

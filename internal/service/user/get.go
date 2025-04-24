@@ -2,7 +2,7 @@ package user
 
 import (
 	"context"
-	"project/iternal/model"
+	"project/internal/model"
 )
 
 func (s *serv) Get(ctx context.Context, id int64) (*model.UserInfoPublic, error) {

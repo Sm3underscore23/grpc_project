@@ -1,7 +1,7 @@
 package user
 
 import (
-	"project/iternal/service"
+	"project/internal/service"
 	desc "project/pkg/user_v1"
 )
 
